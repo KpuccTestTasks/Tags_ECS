@@ -1,3 +1,4 @@
+using ECS.Components;
 using ECS.Systems;
 using Leopotam.Ecs;
 using UnityEngine;
@@ -20,6 +21,9 @@ public class GameStart : MonoBehaviour
             .Add(new ShuffleTagsSystem())
             .Add(new PlaceTagsSystem())
             .Add(new InputSystem())
+            .Add(new MoveTagSystem())
+            .Add(new CheckGameFinishedSystem())
+            .OneFrame<MovedComponent>()
             .Inject(inputController)
             .Inject(board);
 
