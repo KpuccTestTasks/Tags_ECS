@@ -16,8 +16,8 @@ public class Tag : MonoBehaviour, ITag
     
     public void UpdatePosition(int x, int y)
     {
-        float newX = (x - 1) / 4f - 0.125f;
-        float newY = (1 - y) / 4f + 0.125f;
+        float newX = x - 1.5f;
+        float newY = 1.5f - y;
 
         transform.localPosition = new Vector3(newX, newY, 0f);
     }
