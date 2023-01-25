@@ -29,7 +29,7 @@ namespace ECS.Systems
                         continue;
                     
                     var tag = _tagViewService.GetTagView(_movedFilter.Get2(entityIndex).Value);
-                    tag.UpdatePosition(emptyPositionComponent.X, emptyPositionComponent.Y);
+                    tag.UpdatePosition(emptyPositionComponent.X, emptyPositionComponent.Y, true);
                     
                     var newNumber = new NumberComponent();
                     newNumber.Value = _movedFilter.Get2(entityIndex).Value;
